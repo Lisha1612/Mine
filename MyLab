@@ -1,33 +1,36 @@
-program1
+#program1
 import cv2
 import numpy
 import imageio as iio
 from matplotlib import pyplot as plt
 from matplotlib import image as mpimg
-
-
-img = cv2.imread('your image here') h, w, channels = img.shape
+img = cv2.imread('C:\\Users\\Lishakka\\Downloads\\rose.jpg')
+h, w, channels = img.shape
 half = w//2
-
 left_part = img[:, :half]
-
-
 right_part = img[:, half:]
-
-
 half2 = h//2
-
-top = img[:half2, :] bottom = img[half2:, :] plt.title("Image")
-plt.xlabel("X pixel scaling") plt.ylabel("Y pixels scaling")
-
-cv2.imwrite('top.jpg', top) plt.imshow(top)
-plt.show() cv2.imwrite('bottom.jpg', bottom) plt.imshow(bottom)
+top = img[:half2, :] 
+bottom = img[half2:, :] 
+plt.title("Image")
+plt.xlabel("X pixel scaling") 
+plt.ylabel("Y pixels scaling")
+cv2.imwrite('top.jpg', top)
+plt.imshow(top)
+plt.show() 
+cv2.imwrite('bottom.jpg', bottom) 
+plt.imshow(bottom)
 plt.show()
-cv2.imwrite('right.jpg', right_part) plt.imshow(right_part)
-plt.show() cv2.imwrite('left.jpg', left_part) plt.imshow(left_part)
-plt.show() cv2.waitKey(0)
-
-plt.title("Sheep Image") plt.xlabel("X pixel scaling") plt.ylabel("Y pixels scaling")
-
-image = mpimg.imread("/content/IMG-20190808-WA0091-1.jpg") plt.imshow(image)
+cv2.imwrite('right.jpg', right_part) 
+plt.imshow(right_part)
+plt.show()
+cv2.imwrite('left.jpg', left_part) 
+plt.imshow(left_part)
+plt.show()
+cv2.waitKey(0)
+plt.title("Sheep Image") 
+plt.xlabel("X pixel scaling")
+plt.ylabel("Y pixels scaling")
+image = mpimg.imread("/content/IMG-20190808-WA0091-1.jpg") 
+plt.imshow(image)
 plt.show()
